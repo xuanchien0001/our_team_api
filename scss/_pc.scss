@@ -1,0 +1,42 @@
+$res_1200: "only screen and (min-width: 1200px)";
+@mixin PC() {
+  @media #{$res_1200} {
+    @content;
+  }
+}
+
+@include PC() {
+  #sidebar,
+  #sidebarCollapse {
+    display: none;
+  }
+  .navbar {
+    position: relative;
+    z-index: 2;
+  }
+  .container {
+    max-width: 1260px;
+  }
+  #about_us {
+    margin-top: -5rem;
+    .bg {
+      background: url("./../img/images/yellow_top_wave_01.png") no-repeat left
+        top / 110%;
+    }
+    .col-lg-6 {
+      margin-top: 5rem;
+      h1 {
+        @include text($text_color, 4rem, $fw_2);
+      }
+    }
+  }
+  #find_course {
+    background: url("./../img/images/accent_bottom_wave_01.png") no-repeat
+      bottom / 100%;
+  }
+  footer {
+    background: url("./../img/images/footer_background.jpg") no-repeat top
+      center / cover;
+    height: 500px;
+  }
+}

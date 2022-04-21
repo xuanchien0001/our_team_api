@@ -1,0 +1,155 @@
+.navbar {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  #sidebarCollapse {
+    color: $color_primary;
+    background-color: transparent;
+    font-size: 2rem;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .nav-brand {
+    img {
+      width: 5rem;
+    }
+  }
+  .nav {
+    .nav-item {
+      .nav-link {
+        @include text($text_color, $fs_small, $fw_3);
+        &:hover {
+          color: $color_primary;
+        }
+      }
+    }
+  }
+}
+
+#about_us {
+  background: url("./../img/images/Violet_top_left_wave.png") no-repeat bottom /
+    100%;
+  position: relative;
+  padding-bottom: 50px;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    z-index: -1;
+    // background: url("./../img/images/yellow_top_wave_01.png") no-repeat left top /
+    //   110%;
+  }
+  .col-lg-6 {
+    h5 {
+      @include text($color_primary, $fs_normal, $fw_3);
+    }
+  }
+}
+
+#list_user {
+  background: url("./../img/images/Wave_White_bottom_right_shape_01.png")
+    no-repeat center bottom / 100%;
+  background-color: #dcd1f0;
+  padding-top: 2rem;
+  .card {
+    border-radius: 1rem;
+    overflow: hidden;
+    .img {
+      overflow: hidden;
+      img {
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .card-body {
+      text-align: center;
+      overflow: hidden;
+      .country {
+        @include text($color_primary, $fs_normal, $fw_4);
+      }
+      h3 {
+        font-weight: $fw-3;
+      }
+      .card-text {
+        @include text($text_color, $fs_normal, $fw_4);
+      }
+    }
+  }
+}
+
+#find_course {
+  .p-4 {
+    box-shadow: 0 0 4px 1px #ccc;
+    width: 90%;
+    border-radius: 1rem;
+    background-color: white;
+  }
+  form {
+    label {
+      color: $color_primary;
+      margin-left: 1rem;
+    }
+    .form-control,
+    .custom-select {
+      border: none;
+      outline: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .border-input {
+      border: 1px solid #ccc;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      padding: 0.3rem 1px;
+    }
+  }
+}
+
+footer {
+  font-size: 0.9rem;
+  .list-unstyled {
+    margin-top: -0.5625rem;
+    li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+  .btn-footer {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .bg-light {
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $color_primary !important;
+      color: #fff;
+    }
+  }
+  input.btn-footer {
+    color: white;
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+#sidebar {
+  a {
+    color: black;
+    background-color: transparent;
+  }
+}

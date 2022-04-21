@@ -1,0 +1,47 @@
+$res_768: "only screen and (min-width: 767px) and (max-width: 1199px)";
+@mixin Tablet() {
+  @media #{$res_768} {
+    @content;
+  }
+}
+@include Tablet {
+  #about_us {
+    overflow: hidden;
+    margin-top: -4.5rem;
+    position: relative;
+    z-index: -1;
+
+    .bg {
+      background: url("./../img/images/yellow_top_wave_01.png") no-repeat left
+        top / 50%;
+      margin-top: 5rem;
+    }
+    .col-lg-6 {
+      margin-top: 8rem;
+      h1 {
+        @include text($text_color, 4rem, $fw_2);
+      }
+    }
+  }
+  #list_user {
+    overflow: hidden;
+  }
+  .contact {
+    display: none !important;
+  }
+  #find_course {
+    background: url("./../img/images/accent_bottom_wave_01.png") no-repeat left
+      bottom / cover;
+  }
+  footer {
+    background: url("./../img/images/footer_background.jpg") no-repeat center /
+      cover;
+    height: 824px;
+  }
+  .btn-primary-custom {
+    width: 100%;
+  }
+  form {
+    // box-shadow: 0 0 0 2px #ccc;
+  }
+}

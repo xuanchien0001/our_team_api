@@ -1,0 +1,69 @@
+@mixin text($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+.btn-primary-custom {
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid $color_primary;
+  background-color: $color_primary;
+  overflow: hidden;
+  transition: all 0.5s;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $color_primary;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    border-radius: 24px;
+  }
+  &:hover {
+    &::after {
+      display: none;
+    }
+    &::before {
+      transform: scale(1);
+      transition: all 0.6s;
+    }
+    .button-link {
+      color: $color_primary;
+    }
+  }
+
+  .button-link {
+    position: relative;
+    z-index: 4;
+    color: white;
+    text-decoration: none;
+    padding: 0.625rem 1.25rem;
+    display: block;
+    background-color: transparent;
+    font-size: $fs_small;
+  }
+}
+
+.social {
+  a {
+    display: inline-block;
+    font-size: $fs_small;
+    padding: 0 0.2rem;
+    &:hover {
+      color: $color_primary;
+    }
+  }
+}

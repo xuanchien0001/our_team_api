@@ -1,0 +1,314 @@
+.btn-primary-custom {
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid #aa017e;
+  background-color: #aa017e;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.btn-primary-custom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #aa017e;
+}
+.btn-primary-custom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  transform: scale(0);
+  transition: all 0.5s linear;
+  border-radius: 24px;
+}
+.btn-primary-custom:hover::after {
+  display: none;
+}
+.btn-primary-custom:hover::before {
+  transform: scale(1);
+  transition: all 0.6s;
+}
+.btn-primary-custom:hover .button-link {
+  color: #aa017e;
+}
+.btn-primary-custom .button-link {
+  position: relative;
+  z-index: 4;
+  color: white;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  display: block;
+  background-color: transparent;
+  font-size: 0.875rem;
+}
+
+.social a {
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0 0.2rem;
+}
+.social a:hover {
+  color: #aa017e;
+}
+
+@media only screen and (min-width: 1200px) {
+  #sidebar,
+#sidebarCollapse {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 2;
+  }
+
+  .container {
+    max-width: 1260px;
+  }
+
+  #about_us {
+    margin-top: -5rem;
+  }
+  #about_us .bg {
+    background: url("./../img/images/yellow_top_wave_01.png") no-repeat left top/110%;
+  }
+  #about_us .col-lg-6 {
+    margin-top: 5rem;
+  }
+  #about_us .col-lg-6 h1 {
+    color: #181818;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  #find_course {
+    background: url("./../img/images/accent_bottom_wave_01.png") no-repeat bottom/100%;
+  }
+
+  footer {
+    background: url("./../img/images/footer_background.jpg") no-repeat top center/cover;
+    height: 500px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+  #about_us {
+    overflow: hidden;
+    margin-top: -4.5rem;
+    position: relative;
+    z-index: -1;
+  }
+  #about_us .bg {
+    background: url("./../img/images/yellow_top_wave_01.png") no-repeat left top/50%;
+    margin-top: 5rem;
+  }
+  #about_us .col-lg-6 {
+    margin-top: 8rem;
+  }
+  #about_us .col-lg-6 h1 {
+    color: #181818;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  #list_user {
+    overflow: hidden;
+  }
+
+  .contact {
+    display: none !important;
+  }
+
+  #find_course {
+    background: url("./../img/images/accent_bottom_wave_01.png") no-repeat left bottom/cover;
+  }
+
+  footer {
+    background: url("./../img/images/footer_background.jpg") no-repeat center/cover;
+    height: 824px;
+  }
+
+  .btn-primary-custom {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  #about_us {
+    overflow: hidden;
+  }
+  #about_us .bg {
+    background: url("./../img/images/yellow_top_wave_01.png") no-repeat left top/50%;
+  }
+  #about_us .col-lg-6 h1 {
+    color: #181818;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  #find_course {
+    background: url("./../img/images/accent_bottom_wave_01.png") no-repeat left bottom/250%;
+    padding-bottom: 1.5rem;
+  }
+
+  footer {
+    background: url("./../img/images/footer_background.jpg") no-repeat center/cover;
+    height: 1200px;
+  }
+
+  .contact {
+    display: none !important;
+  }
+}
+.navbar {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+.navbar #sidebarCollapse {
+  color: #aa017e;
+  background-color: transparent;
+  font-size: 2rem;
+}
+.navbar #sidebarCollapse:focus {
+  box-shadow: none;
+}
+.navbar .nav-brand img {
+  width: 5rem;
+}
+.navbar .nav .nav-item .nav-link {
+  color: #181818;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.navbar .nav .nav-item .nav-link:hover {
+  color: #aa017e;
+}
+
+#about_us {
+  background: url("./../img/images/Violet_top_left_wave.png") no-repeat bottom/100%;
+  position: relative;
+  padding-bottom: 50px;
+}
+#about_us .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  z-index: -1;
+}
+#about_us .col-lg-6 h5 {
+  color: #aa017e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#list_user {
+  background: url("./../img/images/Wave_White_bottom_right_shape_01.png") no-repeat center bottom/100%;
+  background-color: #dcd1f0;
+  padding-top: 2rem;
+}
+#list_user .card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#list_user .card .img {
+  overflow: hidden;
+}
+#list_user .card .img img {
+  transition: all 0.5s;
+}
+#list_user .card .img img:hover {
+  transform: scale(1.1);
+}
+#list_user .card .card-body {
+  text-align: center;
+  overflow: hidden;
+}
+#list_user .card .card-body .country {
+  color: #aa017e;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#list_user .card .card-body h3 {
+  font-weight: 600;
+}
+#list_user .card .card-body .card-text {
+  color: #181818;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#find_course .p-4 {
+  box-shadow: 0 0 4px 1px #ccc;
+  width: 90%;
+  border-radius: 1rem;
+  background-color: white;
+}
+#find_course form label {
+  color: #aa017e;
+  margin-left: 1rem;
+}
+#find_course form .form-control,
+#find_course form .custom-select {
+  border: none;
+  outline: none;
+}
+#find_course form .form-control:focus,
+#find_course form .custom-select:focus {
+  box-shadow: none;
+}
+#find_course form .border-input {
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  padding: 0.3rem 1px;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+footer .list-unstyled {
+  margin-top: -0.5625rem;
+}
+footer .list-unstyled li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+footer .btn-footer {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+footer .bg-light {
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+footer .bg-light:hover {
+  background-color: #aa017e !important;
+  color: #fff;
+}
+footer input.btn-footer {
+  color: white;
+}
+footer input.btn-footer:focus-visible {
+  outline: none;
+}
+footer input.btn-footer::placeholder {
+  color: white;
+}
+
+#sidebar a {
+  color: black;
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=style.css.map */
