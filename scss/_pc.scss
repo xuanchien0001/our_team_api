@@ -11,7 +11,9 @@ $res_1200: "only screen and (min-width: 1200px)";
     display: none;
   }
   .navbar {
-    position: relative;
+    // position: relative;
+    transition: all 0.3s;
+    // transform: translateY();
     z-index: 2;
   }
   .container {
